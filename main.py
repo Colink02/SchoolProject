@@ -13,6 +13,7 @@ OBJ_2 = "You need to escape before he experiments on you.\n"
 LINE_NORM = "-------------------------------------------------"
 BEGIN = "You wake up in a room, it has a control panel with input\n"
 cardsOut = []
+no_option = "Loser say what? But really, say something that is understood by the program, come on man."
 
 def typewriter(string_to_send):
     '''Write Text like a typewriter'''
@@ -75,11 +76,25 @@ while True:
         sys.exit(21)
     else:
         print "Error: You have inputted something incorrect!"
-typewriter("A Hidden door opens up, You walk through it.")
-#Start War game here
-typewriter("You walk into a room that has a cage with a dog in it.  Do you let it out, or do you leave it?\n")
-Q2 = getinput(">")
-if Q2.lower() == "yes" or "ya" or "yeah" or "yea":
-    print"Well that is pretty nice of you considering that you don't know the dog is really Scrappy."
-elif Q2.lower() == "no" or "nah" or "nope":
-    wins.PlaySound('\)
+    typewriter("A Hidden door opens up, You walk through it.")
+    #Start War game here
+    typewriter("You walk into a room that has a cage with a dog in it.  Do you let it out, or do you leave it?\n")
+    Q2 = getinput(">")
+    if Q2.lower() == "yes" or "ya" or "yeah" or "yeah":
+        print"Well that is pretty nice of you considering that you don't know the dog is really Scrappy."
+    elif Q2.lower() == "no" or "naw" or "yeet" or "nope":
+        print"Well that isn't very nice, you should be ashamed, unless you do not like Scrappy Doo, because that was the dog, Scrappy, the dude who is kind of cool."
+        sys.exit(21)
+    else:
+        print(no_option)
+    typewriter("You walk in a room that is full of pink.  There is a control panel that has two shapes, a maple leaf, and a star.  Which one do you pick?\n")
+    Q3 = getinput(">")
+    if Q3.lower() == "maple leaf":
+        typewriter("Correct! Canada, and one of the devs, are proud of you! Go and get yourself a bottle of maple syrup, you earned it!")
+    elif Q3.lower() == "star":
+        print"Pssh, Americans...JK NO RE! But seriously, you ain't gon' continue wit dat attitude."
+        sys.exit()
+    else:
+        print(no_option)
+        sys.exit()
+    Q4 = getinput("")
